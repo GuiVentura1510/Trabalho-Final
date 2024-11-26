@@ -1,0 +1,13 @@
+* {
+    background-color: #fefae0;
+}
+
+header {
+    background-color: #b99470;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+}
