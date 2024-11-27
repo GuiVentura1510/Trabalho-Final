@@ -1,13 +1,63 @@
 * {
     background-color: #fefae0;
+    font-size: 40px;
+}
+
+h3 {
+    background-color: #b99470;
+}
+
+h4 {
+    background-color: #b99470;
 }
 
 header {
     background-color: #b99470;
     height: 100px;
     display: flex;
-    justify-content: center;
     align-items: center;
     color: white;
     font-size: 32px;
+}
+
+.titulo {
+    margin-left: 300px;
+    font-size: 50px
+}
+
+nav {
+    border: none;
+    height: 100%;
+    display: flex;
+    background-color: #b99470;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 300px;
+}
+
+button {
+    border: none;
+    background-color: #b99470;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #cfb090;
+}
+
+.acessar-conta {
+    background-color: #b99470;
+    display: flex;
+    padding-left: 350px;
+    gap: 100px;
+    height: 50px;
+    width: 500px;
+}
+
+.acessar-conta button:hover {
+    background-color: #cfb090;
 }
