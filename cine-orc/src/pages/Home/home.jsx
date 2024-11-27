@@ -1,4 +1,6 @@
 import './home.css'
+import { Link } from 'react-router-dom';
+
 function Home() {
 
     return (
@@ -10,8 +12,12 @@ function Home() {
                     <button>Maior Nota</button>
                 </nav>
                 <div className="acessar-conta">
-                    <button>Criar Conta</button>
-                    <button>Entrar</button>
+                    <Link to="/Registrar" className='link'>
+                        <button>Criar Conta</button>
+                    </Link>
+                    <Link to="Login" className='link'>
+                        <button>Entrar</button>
+                    </Link>
                 </div>
             </header>
         </div>

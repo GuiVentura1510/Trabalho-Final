@@ -61,3 +61,7 @@ nav button:hover {
 .acessar-conta button:hover {
     background-color: #cfb090;
 }
+
+.acessar-conta .link{
+    text-decoration: none;
+}

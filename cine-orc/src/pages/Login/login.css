@@ -1,0 +1,82 @@
+/* CONTAINER */
+.container{
+    display: flex;
+    height: 100vh;
+}
+
+/* CONTAINER ESQUERDO */
+.l-container{
+    display: flex;
+    height: 100%;
+    width: 50%;
+    background-color: #B99470;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    background-color: #d3d3d3; 
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #000;
+    border-radius: 5px;
+
+}
+
+/* CONTAINER DIREITO */
+.r-container{
+    flex: 1;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* FORMULÁRIO */
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    gap: 15px;
+
+}
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #d3d3d3; /
+}
+
+form input::placeholder {
+    color: #666;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #a97c53; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+form button:hover {
+    background-color: #8c643e; 
+}
+
+.link{
+    color: black;
+}   
