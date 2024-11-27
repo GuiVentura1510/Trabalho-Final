@@ -1,37 +1,58 @@
 import './cadastro.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 function Cadastrar() {
 
-        return(
+    const [nome, setNome] = useState('')
+    const [email, setEmail] = useState('')
+    const [senha, setSenha] = useState('')
 
-            <div className='container'>
-                <div className='l-container'>
-                    <h1 className='logo'>Logo do Projeto</h1>
-                </div>
-                <div className='r-container'>
-                    <h1>Crie Sua Conta</h1>
-                    <form>
+    const handleSubmit = (event) => {
+        event.preventDefault();
+    }
 
-                        <label for="nome">Insira seu nome: </label>
-                        <input type="text" id="nome" required/>
+    return (
 
-                        <label for="email">Insira seu email: </label>
-                        <input type="email" id="email" required/>
-
-                        <label for="senha">Insira sua senha: </label>
-                        <input type="password" id="senha" required/>
-
-                        <button type="submit"> CRIAR </button>
-                    </form>
-                    <Link to="/Login" className='link'>
-                        <p>Já possui um Login?</p>
-                    </Link>
-                </div>
+        <div className='container'>
+            <div className='l-container'>
+                <h1 className='logo'>Logo do Projeto</h1>
             </div>
-            
-        )
+            <div className='r-container'>
+                <h1>Crie Sua Conta</h1>
+                <form>
+
+                    <input
+                        type="text"
+                        id="nome" required
+                        placeholder='Nome'
+                        onChange={(e) => (setNome(e.target.value))}
+                    />
+
+                    <input
+                        type="email"
+                        id="email" required
+                        placeholder='Email'
+                        onChange={(e) => { setEmail(e.target.value) }}
+                    />
+
+                    <input
+                        type="password"
+                        id="senha" required
+                        placeholder='Senha'
+                        onChange={(e) => { setSenha(e.target.value) }}
+                    />
+
+                    <button type="submit"> CRIAR </button>
+                </form>
+                <Link to="/Login" className='link'>
+                    <p>Já possui um Login?</p>
+                </Link>
+            </div>
+        </div>
+
+    )
 }
 
 export default Cadastrar;

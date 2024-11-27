@@ -1,11 +1,14 @@
+* {
+    font-family: inherit;
+}
 /* CONTAINER */
-.container{
+.container {
     display: flex;
     height: 100vh;
 }
 
 /* CONTAINER ESQUERDO */
-.l-container{
+.l-container {
     display: flex;
     height: 100%;
     width: 50%;
@@ -15,7 +18,7 @@
 }
 
 .logo {
-    background-color: #d3d3d3; 
+    background-color: #d3d3d3;
     width: 80%;
     height: 50%;
     display: flex;
@@ -29,7 +32,8 @@
 }
 
 /* CONTAINER DIREITO */
-.r-container{
+
+.r-container {
     flex: 1;
     background-color: #fff;
     display: flex;
@@ -39,7 +43,7 @@
 }
 
 /* FORMULÁRIO */
-form{
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,13 +51,15 @@ form{
     gap: 15px;
 
 }
+
 form input {
     width: 100%;
     padding: 10px;
     font-size: 1rem;
     border: none;
     border-radius: 5px;
-    background-color: #d3d3d3; /
+    background-color: #d3d3d3;
+    font-family: inherit
 }
 
 form input::placeholder {
@@ -66,7 +72,7 @@ form button {
     font-size: 1rem;
     font-weight: bold;
     color: #fff;
-    background-color: #a97c53; 
+    background-color: #a97c53;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -74,9 +80,9 @@ form button {
 }
 
 form button:hover {
-    background-color: #8c643e; 
+    background-color: #8c643e;
 }
 
-.link{
+.link {
     color: black;
-}   
+}
