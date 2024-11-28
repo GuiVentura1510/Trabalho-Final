@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './teste.css'
 import { Link } from 'react-router-dom';
+import LogoFilme from '../../components/LogoFIlme';
 
 const apiKey = import.meta.env.VITE_API_KEY
 const moviesURL = import.meta.env.VITE_API
@@ -21,8 +22,8 @@ function Teste() {
     },[])
 
     return (
-        <div>
-                {topMovies && topMovies.map((movie)=><p>{movie.title}</p>)}
+        <div className=''>
+                {topMovies && topMovies.map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
         </div>
     )
 }
