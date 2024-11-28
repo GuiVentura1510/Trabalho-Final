@@ -17,7 +17,7 @@ function AppRoutes() {
                 <Route path="/Home" element={<HomeL />} />
                 <Route path="/Conta" element={<Conta />} />
                 <Route path="/Teste" element={<Teste />} />
-                <Route path="/Filme" element={<Movie />} />
+                <Route path="/Filme/:id" element={<Movie />} />
             </Routes>
         </BrowserRouter>
     );
