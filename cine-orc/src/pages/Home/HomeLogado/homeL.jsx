@@ -19,8 +19,9 @@ function HomeL() {
                 </nav>
                 <div className="acessar-conta">
                     <Link to="/Conta" className='link'>
-                        <button className='bem-vindo'>Seja Bem vindo, {nome.split(' ')[0]}!</button>
+                        <button className='bem-vindo'> {nome.split(' ')[0]}</button>
                     </Link>
+                    <h3 className='divisao'>||</h3>
                     <Link to='/'>
                         <button className='sair'> Sair</button>
                     </Link>

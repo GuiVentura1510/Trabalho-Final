@@ -19,6 +19,9 @@ function Logar() {
             alert('Login Bem-Sucedido')
             navigate('/Home');
         }
+        else{
+            alert('Usuario ou Senha Errados')
+        }
     };
 
 

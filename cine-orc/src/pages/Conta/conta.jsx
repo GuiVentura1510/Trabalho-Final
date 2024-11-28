@@ -4,22 +4,50 @@ import { useNavigate } from 'react-router-dom';
 
 function Conta() {
 
+    const [newName, setNewName] = useState('');
+    const [newEmail, setNewEmail] = useState('');
+    const [newSenha, setNewSenha] = useState('');
+
     const users = JSON.parse(localStorage.getItem('user'));
 
     const navigate = useNavigate();
+
+    const handleUpdate = () => {
+        const confirmConta = window.confirm('Você tem certeza que deseja alterar a sua conta?');
+        if (confirmConta) {
+            // Atualiza os valores apenas se forem preenchidos
+            if (newName !== '') {
+                users.nome = newName;
+            }
+            if (newEmail !== '') {
+                users.email = newEmail;
+            }
+            if (newSenha !== '') {
+                users.senha = newSenha;
+            }
+
+            // Salva o objeto atualizado no localStorage
+            localStorage.setItem('user', JSON.stringify(users));
+            alert('Conta atualizada com sucesso!');
+            window.location.reload();
+
+        }
+    };
+
+
+
     const handleHomeRedirect = () => {
-        navigate('/')
+        navigate('/Home')
     };
     const handleDelete = () => {
         const confirmDelete = window.confirm('Você tem certeza que deseja deletar sua conta?')
-        if(confirmDelete){
+        if (confirmDelete) {
             localStorage.removeItem('user');
             alert('Conta Deletada!')
             navigate('/')
         }
-
     };
-    
+
     return (
         <div>
             <header>
@@ -27,14 +55,26 @@ function Conta() {
             </header>
             <div className='perfil'>
                 <h4>Nome</h4>
-                <p className='resposta'> {users.nome}</p>
+                <input
+                    className='resposta'
+                    placeholder={users.nome}
+                    onChange={(e) => { setNewName(e.target.value) }}
+                ></input>
                 <h4>Email</h4>
-                <p className='resposta'> {users.email}</p>
+                <input
+                    className='resposta'
+                    placeholder={users.email}
+                    onChange={(e) => { setNewEmail(e.target.value) }}
+                ></input>
                 <h4>Senha</h4>
-                <p className='resposta'> {users.senha}</p>
+                <input
+                    className='resposta'
+                    placeholder={users.senha}
+                    onChange={(e) => { setNewSenha(e.target.value) }}
+                ></input>
             </div>
             <div className='botoes'>
-                <button>Atualizar Conta</button>
+                <button onClick={handleUpdate}>Atualizar Conta</button>
                 <button onClick={handleDelete}>Deletar Conta</button>
             </div>
         </div>

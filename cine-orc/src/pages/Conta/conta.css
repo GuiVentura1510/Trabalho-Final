@@ -16,6 +16,10 @@ header {
     font-size: 50px
 }
 
+.titulo:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
 
 
 .perfil{
@@ -47,6 +51,7 @@ p{
     height: 6vh;
     width: auto;
     gap: 10vh;
+    padding: 3vh;
 }
 
 .botoes button{
