@@ -1,0 +1,61 @@
+* {
+    font-family: inherit;
+}
+
+header {
+    background-color: #b99470;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+}
+
+.titulo {
+    margin-left: 300px;
+    font-size: 50px
+}
+
+
+
+.perfil{
+    /* padding-left: 50vh; */
+    display: flex;
+    flex-direction: column;
+    margin-left: 20vh;
+    
+    padding-top:5vh;
+    padding-bottom: 0vh;
+    width: 40%;
+    
+}
+
+.perfil h4 {
+    background-color: #fefae0;  
+    font-size: 30px;
+    /* padding:3vh;    */
+}
+
+p{
+    font-size: 24px;
+    margin-left: 5vh;
+}
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    height: 6vh;
+    width: auto;
+    gap: 10vh;
+}
+
+.botoes button{
+    font-size: 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.botoes button:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+

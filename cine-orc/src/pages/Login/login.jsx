@@ -8,11 +8,19 @@ function Logar() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
+    const navigate = useNavigate();
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        alert("enviando os dados " + email + " - " + senha)
-    }
+        const users = JSON.parse(localStorage.getItem('user'))
+
+        if(users.email === email && users.senha === senha){
+            alert('Login Bem-Sucedido')
+            navigate('/Home');
+        }
+    };
+
 
     return (
         <div className='container'>
