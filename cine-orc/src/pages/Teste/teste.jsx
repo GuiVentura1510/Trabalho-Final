@@ -2,17 +2,22 @@ import { useEffect, useState } from 'react';
 import './teste.css'
 import { Link } from 'react-router-dom';
 
+const apiKey = import.meta.env.VITE_API_KEY
+const moviesURL = import.meta.env.VITE_API
+
 function Teste() {
 
     const [filme, setFilme] = useState('');
-    const getMovie = () =>{
-        fetch("https://api.themoviedb.org/3/discover/movie?api_key=b97fc4d89976904141568e4d56252eb0")
-        .then(res => res.json())
-        .then(json=>console.log(json))
-    }
+    const [topMovies, setTopMovies] = useState([])
 
-    useEffect(()=>{
-        getMovie()
+    const getTopRatedMovies = async(url) =>{
+        const res = await fetch(url)
+        const data = await res.json()
+        console.log(data)
+    }
+    useEffect(() => {
+        const topRatedUrl = `${moviesURL}top_rated?${apiKey}`
+        console.log(topRatedUrl)
     },[])
 
     return (
