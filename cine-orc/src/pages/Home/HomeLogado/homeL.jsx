@@ -5,8 +5,9 @@ import { Link } from 'react-router-dom';
 function HomeL() {
 
     const [filme, setFilme] = useState('');
-
-
+    
+    const users = JSON.parse(localStorage.getItem('user'));
+    const nome = users.nome;
 
     return (
         <div>
@@ -18,7 +19,10 @@ function HomeL() {
                 </nav>
                 <div className="acessar-conta">
                     <Link to="/Conta" className='link'>
-                        <button>Sua Conta</button>
+                        <button className='bem-vindo'>Seja Bem vindo, {nome.split(' ')[0]}!</button>
+                    </Link>
+                    <Link to='/'>
+                        <button className='sair'> Sair</button>
                     </Link>
                 </div>
             </header>
