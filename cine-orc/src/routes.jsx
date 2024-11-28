@@ -4,6 +4,8 @@ import Cadastrar from "./pages/Cadastro/cadastro.jsx";
 import Logar from "./pages/Login/login.jsx";
 import HomeL from "./pages/Home/HomeLogado/homeL.jsx";
 import Conta from "./pages/Conta/conta.jsx";
+import Teste from "./pages/Teste/teste.jsx";
+import Movie from "./pages/Movie/movie.jsx";
 
 function AppRoutes() {
     return (
@@ -14,6 +16,8 @@ function AppRoutes() {
                 <Route path="/Login" element={<Logar />} />
                 <Route path="/Home" element={<HomeL />} />
                 <Route path="/Conta" element={<Conta />} />
+                <Route path="/Teste" element={<Teste />} />
+                <Route path="/Filme" element={<Movie />} />
             </Routes>
         </BrowserRouter>
     );
