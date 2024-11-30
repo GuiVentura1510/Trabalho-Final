@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import './home.css'
-import { Link } from 'react-router-dom';
 import Header from '../../components/header';
-
+import SearchBar from '../../components/Searchbar';
+import Filter from '../../components/Filter';
 function Home() {
 
     const [filme, setFilme] = useState('');
@@ -11,7 +11,7 @@ function Home() {
 
     return (
         <div>
-            <Header/>   
+            <Header/>
             <div className='search-bar'>
                 <input
                     type='search'
@@ -20,11 +20,7 @@ function Home() {
                     onChange={(e) => setFilme(e.target.value)}
                 ></input>
             </div>
-            <div className='filtrar-filmes'>
-                <button>Sem filtro</button>
-                <button>Por Ordem Alfabética</button>
-                <button>Por Ordem de Lançamento</button>
-            </div>
+            <Filter/>
         </div>
     )
 }
