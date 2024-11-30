@@ -2,15 +2,6 @@
     font-family: inherit;
 }
 
-header {
-    background-color: #b99470;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 32px;
-}
-
 .titulo {
     margin-left: 300px;
     font-size: 50px
@@ -23,7 +14,6 @@ header {
 
 
 .perfil{
-    /* padding-left: 50vh; */
     display: flex;
     flex-direction: column;
     margin-left: 20vh;
@@ -37,7 +27,6 @@ header {
 .perfil h4 {
     background-color: #fefae0;  
     font-size: 30px;
-    /* padding:3vh;    */
 }
 
 p{

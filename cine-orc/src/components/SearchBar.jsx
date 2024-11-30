@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './SearchBar.css'
 function SearchBar() {
     const [filme, setFilme] = useState('');
   return (
