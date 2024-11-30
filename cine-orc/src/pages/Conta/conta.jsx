@@ -12,9 +12,19 @@ function Conta() {
 
     const navigate = useNavigate();
 
+    const isValidEmail = (email) => {
+        return email.includes('@') && email.includes('.') && email.indexOf('@') < email.lastIndexOf('.');
+    };
+
+
     const handleUpdate = () => {
         const confirmConta = window.confirm('Você tem certeza que deseja alterar a sua conta?');
         if (confirmConta) {
+            if (newEmail && !isValidEmail(newEmail)) {
+                alert ('Insira um Email Valido!');
+                window.location.reload();
+                return;
+            }
             // Atualiza os valores apenas se forem preenchidos
             if (newName !== '') {
                 users.nome = newName;
@@ -63,6 +73,8 @@ function Conta() {
                 <h4>Email</h4>
                 <input
                     className='resposta'
+                    type='email'
+                    id="email" required
                     placeholder={users.email}
                     onChange={(e) => { setNewEmail(e.target.value) }}
                 ></input>
