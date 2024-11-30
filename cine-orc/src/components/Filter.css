@@ -1,0 +1,17 @@
+.filtrar-filmes {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.filtrar-filmes button {
+    font-family: inherit;
+    font-size: 28px;
+    border-radius: 40px;
+}
+
+.filtrar-filmes button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+
+}

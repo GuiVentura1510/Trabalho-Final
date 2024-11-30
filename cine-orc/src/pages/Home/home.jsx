@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './home.css'
-import Header from '../../components/header';
+import Header from '../../components/Header';
 import SearchBar from '../../components/Searchbar';
 import Filter from '../../components/Filter';
 function Home() {

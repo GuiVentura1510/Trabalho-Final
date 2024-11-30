@@ -1,0 +1,48 @@
+header {
+    background-color: #b99470;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 32px;
+}
+
+nav {
+    border: none;
+    height: 100%;
+    display: flex;
+    background-color: #b99470;
+    justify-content: center;
+    align-items: center;
+    gap: 75px;
+    padding-left: 300px;
+}
+header button {
+    border: none;
+    background-color: #b99470;
+    color: white;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+nav button:hover {
+    background-color: #cfb090;
+}
+
+.acessar-conta {
+    background-color: #b99470;
+    display: flex;
+    padding-left: 350px;
+    gap: 100px;
+    height: 50px;
+    width: 500px;
+}
+
+.acessar-conta button:hover {
+    background-color: #cfb090;
+}
+
+.acessar-conta .link {
+    text-decoration: none;
+}

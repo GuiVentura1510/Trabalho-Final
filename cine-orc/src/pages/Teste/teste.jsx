@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './teste.css'
 import { Link } from 'react-router-dom';
 import LogoFilme from '../../components/LogoFIlme';
-import Header from '../../components/header';
+import Header from '../../components/Header';
 
 const apiKey = import.meta.env.VITE_API_KEY
 const moviesURL = import.meta.env.VITE_API
