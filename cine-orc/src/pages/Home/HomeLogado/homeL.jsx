@@ -1,6 +1,11 @@
 import { useState } from 'react';
-import './homeL.css'
 import { Link } from 'react-router-dom';
+import Header from '../../../components/Header';
+import Filter from '../../../components/Filter'
+import '../../../components/Header.css'
+import './homeL.css'
+import '../home.css'
+import '../../../components/SearchBar.css'
 
 function HomeL() {
 
@@ -10,7 +15,7 @@ function HomeL() {
     const nome = users.nome;
 
     return (
-        <div>
+        <div className='HomeL'>
             <header>
                 <h3 className='titulo'>Cine Orc</h3>
                 <nav className='tipos-filme'>
@@ -35,11 +40,7 @@ function HomeL() {
                     onChange={(e) => setFilme(e.target.value)}
                 ></input>
             </div>
-            <div className='filtrar-filmes'>
-                <button>Sem filtro</button>
-                <button>Por Ordem Alfabética</button>
-                <button>Por Ordem de Lançamento</button>
-            </div>
+            <Filter/>
         </div>
     )
 }
