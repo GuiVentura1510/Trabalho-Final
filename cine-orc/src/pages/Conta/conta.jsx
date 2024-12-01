@@ -10,6 +10,7 @@ function Conta() {
     const [showSenha, setShowSenha] = useState(false); 
 
     const users = JSON.parse(localStorage.getItem('user'));
+    const nome = users.nome
 
     const navigate = useNavigate();
 
@@ -55,10 +56,10 @@ function Conta() {
             navigate('/');
         }
     };
-
+    const logado = 'sim'
     return (
         <div>
-            <Header redirect={handleHomeRedirect}/>
+            <Header redirect={handleHomeRedirect} logado={logado} username={nome}/>
             <div className="perfil">
                 <h4>Nome</h4>
                 <input
