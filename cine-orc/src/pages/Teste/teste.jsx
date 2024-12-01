@@ -24,9 +24,14 @@ function Teste() {
     },[])
 
     return (
-        <div className=''>
+        <div className='container-home'>
             <Header/>
-                {topMovies && topMovies.map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
+            <div className='container-filmes'>
+                <h2 className='categoria'>Melhores Filmes</h2>
+                <div className='filmes'>
+                    {topMovies && topMovies.map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
+                </div>
+            </div>
         </div>
     )
 }
