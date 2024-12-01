@@ -6,12 +6,16 @@ import Filter from '../../components/Filter';
 function Home() {
 
     const [filme, setFilme] = useState('');
+    
+    const handleHomeRedirect = () => {
+        navigate('/Home');
+    };
 
 
 
     return (
         <div>
-            <Header/>
+            <Header redirect={handleHomeRedirect}/>
             <div className='search-bar'>
                 <input
                     type='search'
