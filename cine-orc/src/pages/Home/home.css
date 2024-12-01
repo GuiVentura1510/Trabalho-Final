@@ -1,6 +1,7 @@
 * {
     background-color: #fefae0;
     font-size: 40px;
+    
 }
 
 h3 {
@@ -11,7 +12,37 @@ h4 {
     background-color: #b99470;
 }
 
-.titulo {
-    margin-left: 300px;
-    font-size: 50px
+.container-home{
+    padding: 0;
+    margin: 0;
+}
+.container-filmes{
+    margin-left: 0;
+    margin-top: 11vh;
+    width: 100%;
+}
+
+.filmes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 2000px;
+    margin: 0 auto;
+}
+
+.filmes div{
+    width: 30%;
+    color: #000000;
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #b99470;
+}
+.filmes div:hover{
+    color: cyan;
+}
+.filmes div img{
+    max-width: 100%;
 }
