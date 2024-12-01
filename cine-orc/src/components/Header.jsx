@@ -20,7 +20,7 @@ function Header({redirect, logado, username}) {
                 </Link>
               </div>
             ):(
-              <div>
+              <div className='buttonL'>
             <Link to="/Registrar" className='link'>
                 <button>Criar Conta</button>
             </Link>

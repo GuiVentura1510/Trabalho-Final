@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import Header from '../../../components/Header';
 import Filter from '../../../components/Filter'
 import '../../../components/Header.css'
-import './homeL.css'
 import '../home.css'
 import '../../../components/SearchBar.css'
 
