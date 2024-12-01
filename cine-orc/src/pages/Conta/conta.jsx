@@ -1,6 +1,7 @@
 import './conta.css';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../../components/Header';
 
 function Conta() {
     const [newName, setNewName] = useState('');
@@ -57,9 +58,7 @@ function Conta() {
 
     return (
         <div>
-            <header>
-                <button onClick={handleHomeRedirect} className="titulo">Cine Orc</button>
-            </header>
+            <Header redirect={handleHomeRedirect}/>
             <div className="perfil">
                 <h4>Nome</h4>
                 <input

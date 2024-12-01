@@ -2,16 +2,6 @@
     font-family: inherit;
 }
 
-.titulo {
-    margin-left: 300px;
-    font-size: 50px
-}
-
-.titulo:hover{
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
-}
-
 
 .perfil{
     display: flex;
