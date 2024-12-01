@@ -13,25 +13,11 @@ function HomeL() {
     
     const users = JSON.parse(localStorage.getItem('user'));
     const nome = users.nome;
+    const logado = 'sim'
 
     return (
         <div className='HomeL'>
-            <header>
-                <h3 className='titulo'>Cine Orc</h3>
-                <nav className='tipos-filme'>
-                    <button>Em Cartaz</button>
-                    <button>Maior Nota</button>
-                </nav>
-                <div className="acessar-conta">
-                    <Link to="/Conta" className='link'>
-                        <button className='bem-vindo'> {nome.split(' ')[0]}</button>
-                    </Link>
-                    <h3 className='divisao'>||</h3>
-                    <Link to='/'>
-                        <button className='sair'> Sair</button>
-                    </Link>
-                </div>
-            </header>
+            <Header logado={logado} username={nome}/>
             <div className='search-bar'>
                 <input
                     type='search'
