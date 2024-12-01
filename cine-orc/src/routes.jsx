@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/home.jsx";
 import Cadastrar from "./pages/Cadastro/cadastro.jsx";
 import Logar from "./pages/Login/login.jsx";
-import HomeL from "./pages/Home/HomeLogado/homeL.jsx";
 import Conta from "./pages/Conta/conta.jsx";
 import Teste from "./pages/Teste/teste.jsx";
 import Movie from "./pages/Movie/movie.jsx";
