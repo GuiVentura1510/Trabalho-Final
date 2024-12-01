@@ -14,7 +14,6 @@ function AppRoutes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/Registrar" element={<Cadastrar />} />
                 <Route path="/Login" element={<Logar />} />
-                <Route path="/Home" element={<HomeL />} />
                 <Route path="/Conta" element={<Conta />} />
                 <Route path="/Teste" element={<Teste />} />
                 <Route path="/Filme/:id" element={<Movie />} />
