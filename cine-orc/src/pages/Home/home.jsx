@@ -1,21 +1,22 @@
 import { useState } from 'react';
-import './home.css'
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
 import Filter from '../../components/Filter';
+import './home.css'
 function Home() {
 
     const [filme, setFilme] = useState('');
     
     const handleHomeRedirect = () => {
-        navigate('/Home');
+        navigate('/');
     };
-
-
+    const users = JSON.parse(localStorage.getItem('user'));
+    const nome = users.nome;
+    const logado = 'sim'
 
     return (
         <div>
-            <Header redirect={handleHomeRedirect}/>
+            <Header redirect={handleHomeRedirect} logado={logado} username={nome}/>
             <div className='search-bar'>
                 <input
                     type='search'

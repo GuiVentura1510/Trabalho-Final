@@ -45,7 +45,7 @@ function Conta() {
     };
 
     const handleHomeRedirect = () => {
-        navigate('/Home');
+        navigate('/');
     };
 
     const handleDelete = () => {
