@@ -59,3 +59,10 @@ nav button:hover {
 .acessar-conta .link {
     text-decoration: none;
 }
+.buttonL{
+    display: flex;
+}
+.bem-vindo, .sair{
+    background-color: #b99470;
+}
+
