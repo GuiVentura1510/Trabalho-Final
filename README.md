@@ -12,15 +12,15 @@ Antes de mais nada, verifique se você tem os seguintes requisitos instalados:
 ## Passos para Iniciar
 
 1. Clone o repositório com o comando:
-    git clone 
+git clone 
 
 2. Entre no diretorio do projeto
 
 3. Instale as depencencias do projeto com o comando:
-    npm install
+npm install
 
 4. Adicione um arquivo .env dentro da pasta cine-orc:
-    dentro do arquivo adicione uma variavel chamada VITE_API_KEY=api_key=Exemplo_de_chave
+dentro do arquivo adicione uma variavel chamada VITE_API_KEY=api_key=Exemplo_de_chave
 
 5. Rode o projeto com o comando: 
-    npm run dev
+npm run dev
