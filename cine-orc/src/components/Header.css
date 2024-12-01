@@ -3,8 +3,13 @@ header {
     height: 10vh;
     display: flex;
     align-items: center;
-    color: white;
     font-size: 32px;
+    top: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
 }
 
 nav {
@@ -12,11 +17,20 @@ nav {
     height: 100%;
     display: flex;
     background-color: #b99470;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    gap: 75px;
-    padding-left: 300px;
 }
+.titulo{
+    color: white;
+
+}
+
+.titulo:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
 header button {
     border: none;
     background-color: #b99470;
@@ -34,7 +48,6 @@ nav button:hover {
     background-color: #b99470;
     display: flex;
     padding-left: 350px;
-    gap: 100px;
     height: 50px;
     width: 500px;
 }
