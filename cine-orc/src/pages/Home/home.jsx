@@ -5,6 +5,7 @@ import Filter from '../../components/Filter';
 import LogoFilme from '../../components/LogoFilme';
 import './home.css'
 
+const language = import.meta.env.VITE_LANGUAGE
 const apiKey = import.meta.env.VITE_API_KEY
 const moviesURL = import.meta.env.VITE_API
 
@@ -22,7 +23,7 @@ function Home() {
     setTopMovies(data.results)
     }
     useEffect(() => {
-        const topRatedUrl = `${moviesURL}top_rated?${apiKey}`
+        const topRatedUrl = `${moviesURL}top_rated?${apiKey}&${language}`
         getTopRatedMovies(topRatedUrl)
     },[])
     return (

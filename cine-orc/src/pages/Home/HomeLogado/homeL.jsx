@@ -1,14 +1,27 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import {useEffect, useState } from 'react';
+// import { navigate } from 'react-router-dom';
 import Header from '../../../components/Header';
 import Filter from '../../../components/Filter'
-import '../../../components/Header.css'
 import '../home.css'
 import '../../../components/SearchBar.css'
+import LogoFilme from '../../../components/LogoFilme';
+const language = import.meta.env.VITE_LANGUAGE
+const apiKey = import.meta.env.VITE_API_KEY
+const moviesURL = import.meta.env.VITE_API
 
 function HomeL() {
 
     const [filme, setFilme] = useState('');
+    const [topMovies, setTopMovies] = useState([])
+    const getTopRatedMovies = async(url) =>{
+    const res = await fetch(url)
+    const data = await res.json()
+    setTopMovies(data.results)
+    }
+    useEffect(() => {
+        const topRatedUrl = `${moviesURL}top_rated?${apiKey}&${language}`
+        getTopRatedMovies(topRatedUrl)
+    },[])
     
     const users = JSON.parse(localStorage.getItem('user'));
     const nome = users.nome;
@@ -26,6 +39,9 @@ function HomeL() {
                 ></input>
             </div>
             <Filter/>
+            <div className='filmes'>
+                    {topMovies && topMovies.map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
+                </div>
         </div>
     )
 }
