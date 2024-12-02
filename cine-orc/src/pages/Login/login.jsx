@@ -15,6 +15,13 @@ function Logar() {
 
         const users = JSON.parse(localStorage.getItem('user'))
 
+        if (!users) {
+            alert('Essa conta não está registrada! Cadastre-se!')
+            navigate('/Registrar');
+            return;
+        }
+
+
         if(users.email === email && users.senha === senha){
             alert('Login Bem-Sucedido')
             navigate('/Home');

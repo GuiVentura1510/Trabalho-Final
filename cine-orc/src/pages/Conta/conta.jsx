@@ -7,10 +7,10 @@ function Conta() {
     const [newName, setNewName] = useState('');
     const [newEmail, setNewEmail] = useState('');
     const [newSenha, setNewSenha] = useState('');
-    const [showSenha, setShowSenha] = useState(false); 
+    const [showSenha, setShowSenha] = useState(false);
 
     const users = JSON.parse(localStorage.getItem('user'));
-    const nome = users.nome
+    const nome = users.nome;
 
     const navigate = useNavigate();
 
@@ -26,7 +26,6 @@ function Conta() {
                 return;
             }
 
-            // Atualiza os valores apenas se forem preenchidos
             if (newName !== '') {
                 users.nome = newName;
             }
@@ -37,7 +36,6 @@ function Conta() {
                 users.senha = newSenha;
             }
 
-            // Salva o objeto atualizado no localStorage
             localStorage.setItem('user', JSON.stringify(users));
             alert('Conta atualizada com sucesso!');
             window.location.reload();
@@ -45,7 +43,7 @@ function Conta() {
     };
 
     const handleHomeRedirect = () => {
-        navigate('/');
+        navigate('/Home');
     };
 
     const handleDelete = () => {
@@ -59,11 +57,12 @@ function Conta() {
     const logado = 'sim'
     return (
         <div>
-            <Header redirect={handleHomeRedirect} logado={logado} username={nome}/>
+            <Header redirect={handleHomeRedirect} logado={logado} username={nome} />
             <div className="perfil">
                 <h4>Nome</h4>
                 <input
                     className="resposta"
+                    type="text"
                     placeholder={users.nome}
                     onChange={(e) => { setNewName(e.target.value); }}
                 ></input>
@@ -80,14 +79,14 @@ function Conta() {
                         className="resposta"
                         type={showSenha ? "text" : "password"}
                         placeholder={
-                            showSenha 
-                                ? users.senha 
+                            showSenha
+                                ? users.senha
                                 : '*'.repeat(users.senha.length)
                         }
                         onChange={(e) => { setNewSenha(e.target.value); }}
                     ></input>
-                    <button 
-                        onClick={() => setShowSenha(!showSenha)} 
+                    <button
+                        onClick={() => setShowSenha(!showSenha)}
                         style={{ marginLeft: '10px' }}
                     >
                         {showSenha ? "Ocultar" : "Mostrar"}
