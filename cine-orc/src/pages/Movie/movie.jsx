@@ -26,13 +26,15 @@ function Movie() {
 
     return (
         <div className='paginaF'>
-            {/* <Header/> */}
-            {movie && <>
-            <LogoFilme movie={movie} showLink={false}/>
-            </>}
-            <div className='descricao'>
-                <h3>Descricao</h3>
-                {/* <p>{movie.overview}</p> */}
+            <Header/>
+            <div className='bodyF'>
+                {movie && <>
+                <LogoFilme movie={movie} showLink={false}/>
+                </>}
+                <div className='descricao'>
+                    <h3 className='descricaoT'>Descricao</h3>
+                    <p>{movie?.overview}</p>
+                </div>
             </div>
         </div>
     )
