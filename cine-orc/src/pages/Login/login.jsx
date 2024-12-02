@@ -1,6 +1,7 @@
 import './login.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import LogoCineOrc from '../../images/LogoCineOrc.jpeg'
 
 
 function Logar() {
@@ -22,11 +23,11 @@ function Logar() {
         }
 
 
-        if(users.email === email && users.senha === senha){
+        if (users.email === email && users.senha === senha) {
             alert('Login Bem-Sucedido')
             navigate('/Home');
         }
-        else{
+        else {
             alert('Usuario ou Senha Errados')
         }
     };
@@ -35,12 +36,11 @@ function Logar() {
     return (
         <div className='container'>
             <div className='l-container'>
-                <h1 className='logo'>Logo do Projeto</h1>
+                <img src={LogoCineOrc} className='logo'></img>
             </div>
             <div className='r-container'>
                 <h1>Acesse Sua Conta</h1>
                 <form onSubmit={handleSubmit}>
-                    {/* <label for="email">Insira seu email: </label> */}
                     <input
                         type="email"
                         id="email" required
@@ -48,7 +48,6 @@ function Logar() {
                         onChange={(e) => { setEmail(e.target.value) }}
                     />
 
-                    {/* <label for="senha">Insira sua senha: </label> */}
                     <input
                         type="password"
                         id="senha" required
