@@ -6,6 +6,7 @@ import Header from '../../components/Header'
 
 const apiKey = import.meta.env.VITE_API_KEY
 const moviesURL = import.meta.env.VITE_API
+const language = import.meta.env.VITE_LANGUAGE
 
 function Movie() {
 
@@ -20,7 +21,7 @@ function Movie() {
     }
 
     useEffect(() => {
-        const movieUrl = `${moviesURL}${id}?${apiKey}`
+        const movieUrl = `${moviesURL}${id}?${apiKey}&${language}`
         getMovie(movieUrl)
     }, [])
 
