@@ -13,3 +13,12 @@
 .descricao p{
     background-color: #fefae0;
 }
+.bodyF{
+    margin-top: 100px;
+    display: flex;
+}
+.descricaoT{
+    display: flex;
+    align-items: center;
+    
+}
