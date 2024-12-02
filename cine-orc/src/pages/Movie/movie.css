@@ -1,0 +1,15 @@
+.paginaF{
+    background-color: #fefae0;
+    display: flex;
+}
+.descricao{
+    background-color: #fefae0;
+}
+
+.paginaF .logo-filme{
+    text-align: center;
+}
+
+.descricao p{
+    background-color: #fefae0;
+}
