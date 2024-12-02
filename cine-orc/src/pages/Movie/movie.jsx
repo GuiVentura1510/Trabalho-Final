@@ -12,7 +12,9 @@ function Movie() {
 
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
-    const [favorito, setFavorito] = useState(false);   
+    const [favorito, setFavorito] = useState(false);
+    const [cast, setCast] = useState([]);
+
 
     // Função para adicionar aos favoritos
     const handleFavorites = () => {
@@ -36,12 +38,21 @@ function Movie() {
         const data = await res.json();
         setMovie(data);
     };
-
+    const getCast = async (url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+        setCast(data.cast);
+    };
+    
     useEffect(() => {
         const movieUrl = `${moviesURL}${id}?${apiKey}&${language}`;
         getMovie(movieUrl);
     }, [id]);
 
+    useEffect(() =>{
+        const castUrl = `${moviesURL}${id}/credits?${apiKey}&${language}`
+        getCast(castUrl)
+    }, [id])
     // Verificar se o filme já está nos favoritos
     useEffect(() => {
         const favorites = JSON.parse(localStorage.getItem('favorites')) || [];
@@ -79,6 +90,22 @@ function Movie() {
                             >Adicionar aos Favoritos</button>
                         )}
                     </div>
+                </div>
+                <div>
+                {cast.length > 0 && (
+                    <div className='elenco'>
+                        <h4>Elenco</h4>
+                        <ul>
+                            {cast.slice(0,5).map(actor => (
+                                <li key={actor.id}>
+                                    <img src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} alt={actor.name} className='atores' />
+                                    <p>{actor.name}</p>
+                                    <p>{actor.character}</p>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
                 </div>
             </div>
         </div>
