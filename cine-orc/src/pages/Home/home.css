@@ -39,7 +39,7 @@ h4 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #b99470;
+    background-color: #fefae0;
 }
 .filmes div:hover{
     color: cyan;

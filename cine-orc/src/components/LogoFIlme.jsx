@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom"
+import './LogoFilme.css'
 
 const imageUrl =import.meta.env.VITE_IMG
 

@@ -16,6 +16,12 @@ function Cadastrar() {
 
 
     const handleSubmit = (event) => {
+        const users = JSON.parse(localStorage.getItem('user'))
+        if (users.email === email) {
+            alert('Já existe uma conta cadastrada com esse email!');
+            navigate('/Login');
+            return;
+        }
         //evita com que a pagina recarregue quando apertar o botao, assim fazendo-o ir à pagina de login
         event.preventDefault();
         //cria um user com as informações    
@@ -24,6 +30,7 @@ function Cadastrar() {
             email,
             senha
         };
+
         //armazena o user no Local Storage
         localStorage.setItem('user', JSON.stringify(userData));
 
