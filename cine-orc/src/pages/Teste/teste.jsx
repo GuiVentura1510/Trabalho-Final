@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import LogoFilme from '../../components/LogoFIlme';
+import LogoFilme from '../../components/LogoFilme';
 import Header from '../../components/Header';
 import '../../components/SearchBar.css'
 import '../Home/home.css'
