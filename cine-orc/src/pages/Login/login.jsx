@@ -17,7 +17,7 @@ function Logar() {
 
         if(users.email === email && users.senha === senha){
             alert('Login Bem-Sucedido')
-            navigate('/');
+            navigate('/Home');
         }
         else{
             alert('Usuario ou Senha Errados')

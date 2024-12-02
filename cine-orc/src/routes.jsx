@@ -5,6 +5,7 @@ import Logar from "./pages/Login/login.jsx";
 import Conta from "./pages/Conta/conta.jsx";
 import Teste from "./pages/Teste/teste.jsx";
 import Movie from "./pages/Movie/movie.jsx";
+import HomeL from "./pages/Home/HomeLogado/homeL.jsx";
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
                 <Route path="/Login" element={<Logar />} />
                 <Route path="/Conta" element={<Conta />} />
                 <Route path="/Teste" element={<Teste />} />
+                <Route path="/Home" element={<HomeL />} />
                 <Route path="/Filme/:id" element={<Movie />} />
             </Routes>
         </BrowserRouter>

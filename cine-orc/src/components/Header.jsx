@@ -7,8 +7,8 @@ function Header({redirect, logado, username}) {
       <header>
         <nav className='tipos-filme'>
         <button onClick={redirect} className="titulo">Cine Orc</button>
-          <button>Em Cartaz</button>
-          <button>Maior Nota</button>
+          <button className='categorias'>Em Cartaz</button>
+          <button className='categorias'>Maior Nota</button>
           <div className="acessar-conta">
             {logado ?(
               <div className='buttonL'>
@@ -22,10 +22,10 @@ function Header({redirect, logado, username}) {
             ):(
               <div className='buttonL'>
             <Link to="/Registrar" className='link'>
-                <button>Criar Conta</button>
+                <button className='criar-conta'>Criar Conta</button>
             </Link>
             <Link to="Login" className='link'>
-                <button>Entrar</button>
+                <button className='login'>Entrar</button>
             </Link>
             </div>
             )}
