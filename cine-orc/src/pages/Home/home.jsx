@@ -10,13 +10,10 @@ function Home() {
     const handleHomeRedirect = () => {
         navigate('/');
     };
-    const users = JSON.parse(localStorage.getItem('user'));
-    const nome = users.nome;
-    const logado = 'sim'
 
     return (
         <div>
-            <Header redirect={handleHomeRedirect} logado={logado} username={nome}/>
+            <Header redirect={handleHomeRedirect}/>
             <div className='search-bar'>
                 <input
                     type='search'
