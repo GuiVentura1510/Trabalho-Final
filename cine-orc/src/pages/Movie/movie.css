@@ -35,6 +35,13 @@ h4 {
     border-radius: 40px;
     cursor: pointer;
     padding:20px
+}
+.remove {
+    background-color: red;
+    color: white;
+}
 
-
+.add {
+    background-color: green;
+    color: white;
 }
