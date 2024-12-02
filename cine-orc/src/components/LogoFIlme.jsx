@@ -8,7 +8,7 @@ const LogoFilme = ({movie, showLink=true}) => {
     <div className="logo-filme">
         <img src={imageUrl + movie.poster_path} alt={movie.title} />
         <h2>{movie.title}</h2>
-        {showLink && <Link to ={`/FIlme/${movie.id}`}>Detalhes</Link>}
+        {showLink && <Link to ={`/Filme/${movie.id}`}>Detalhes</Link>}
     </div>
   )
 }

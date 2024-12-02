@@ -1,24 +1,40 @@
-.paginaF{
+.paginaF {
     background-color: #fefae0;
     display: flex;
 }
-.descricao{
-    background-color: #fefae0;
-}
 
-.paginaF .logo-filme{
+.paginaF .logo-filme {
     text-align: center;
 }
 
-.descricao p{
+.descricao p {
     background-color: #fefae0;
+    padding-left: 45px ;
 }
-.bodyF{
+
+.bodyF {
     margin-top: 100px;
     display: flex;
 }
-.descricaoT{
+
+h4 {
+    background-color: #fefae0;
     display: flex;
     align-items: center;
-    
+    padding-left: 30px;
+    font-size: 24px;
+
+}
+
+.favoritos{
+    padding: 50px;
+}
+.favoritos button{
+    font-family: inherit;
+    font-size: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    padding:20px
+
+
 }
