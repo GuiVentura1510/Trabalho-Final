@@ -8,10 +8,19 @@
     font-family: inherit;
     font-size: 28px;
     border-radius: 40px;
+    cursor: pointer;
+
 }
 
 .filtrar-filmes button:hover {
     transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+    /* transition: transform 0.2s ease-in-out; */
 
+}
+
+.filtrar-filmes button.active {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.1);
+    border-color: #007bff;
 }
