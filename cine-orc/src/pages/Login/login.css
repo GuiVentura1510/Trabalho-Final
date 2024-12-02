@@ -4,7 +4,8 @@
 /* CONTAINER */
 .container {
     display: flex;
-    height: 100vh;
+    margin:-10px;
+
 }
 
 /* CONTAINER ESQUERDO */
