@@ -9,8 +9,6 @@ const moviesURL = import.meta.env.VITE_API
 
 function Movie() {
 
-    const [filme, setFilme] = useState('');
-
     const {id} = useParams()
     const [movie, setMovie] = useState(null)
 
