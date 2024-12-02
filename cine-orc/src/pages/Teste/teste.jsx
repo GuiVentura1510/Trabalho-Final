@@ -10,7 +10,6 @@ const moviesURL = import.meta.env.VITE_API
 
 function Teste() {
 
-    const [filme, setFilme] = useState('');
     const [topMovies, setTopMovies] = useState([])
 
     const getTopRatedMovies = async(url) =>{

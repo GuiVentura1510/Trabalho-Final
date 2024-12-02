@@ -32,7 +32,7 @@ function Movie() {
             </>}
             <div className='descricao'>
                 <h3>Descricao</h3>
-                <p>{movie.overview}</p>
+                {/* <p>{movie.overview}</p> */}
             </div>
         </div>
     )
