@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from '../../../components/Header';
 import Filter from '../../../components/Filter';
-import SearchBar from '../../../components/SearchBar';  // Importando a SearchBar
+import SearchBar from '../../../components/SearchBar'; 
 import '../home.css';
 import '../../../components/SearchBar.css';
 import LogoFilme from '../../../components/LogoFilme';

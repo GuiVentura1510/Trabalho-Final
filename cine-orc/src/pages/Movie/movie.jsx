@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import './movie.css'
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import LogoFilme from '../../components/LogoFilme';
 import Header from '../../components/Header'
 
@@ -62,9 +62,14 @@ function Movie() {
         }
     }, [movie]);
 
+    const navigate = useNavigate()
+    const handleHomeRedirect = () => {
+        navigate('/')
+    };
+
     return (
         <div className='paginaF'>
-            <Header />
+            <Header redirect={handleHomeRedirect}/>
             <div className='bodyF'>
                 {movie && (
                     <>
