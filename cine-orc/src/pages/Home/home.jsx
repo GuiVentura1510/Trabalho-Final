@@ -14,6 +14,7 @@ function Home() {
     const [filme, setFilme] = useState('');
     const [pesquisados, setPesquisados] = useState('');
     const [topMovies, setTopMovies] = useState([]);
+    const [cinema, setCinema] = useState([])
     const handleHomeRedirect = () => {
         navigate('/');
     };
@@ -22,6 +23,12 @@ function Home() {
         const data = await res.json()
         setTopMovies(data.results)
         setPesquisados(data.results)
+    }
+    const getCinema = async (url) =>{
+        const res = await fetch(url)
+        const data = await res.json()
+        console.log(data)
+        setCinema(data.results)
     }
 
     const handleSearch = (pesquisa) => {
@@ -41,6 +48,10 @@ function Home() {
         const topRatedUrl = `${moviesURL}top_rated?${apiKey}&${language}`
         getTopRatedMovies(topRatedUrl)
     }, [])
+    useEffect(() =>{
+        const cinemaUrl = `${moviesURL}now_playing?${apiKey}&language=${language}`;
+        getCinema(cinemaUrl)
+    },[])
 
     return (
         <div>
@@ -51,6 +62,10 @@ function Home() {
                 <h2 className='categoria'>Melhores Filmes</h2>
                 <div className='filmes'>
                     {pesquisados && pesquisados.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+                </div>
+                <h2 className='categoria'> No cinema</h2>
+                <div className='filmes'>
+                    {cinema && cinema.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
                 </div>
             </div>
         </div>
