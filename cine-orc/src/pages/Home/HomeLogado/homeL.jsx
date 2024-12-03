@@ -40,7 +40,7 @@ function HomeL() {
             </div>
             <Filter/>
             <div className='filmes'>
-                    {topMovies && topMovies.map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
+                    {topMovies && topMovies.slice(0,10).map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
                 </div>
         </div>
     )
