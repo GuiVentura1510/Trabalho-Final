@@ -5,6 +5,10 @@
     margin-top: 70px;
 }
 
+.search-bar form{
+    background-color: #fefae0;
+
+}
 .search-bar input {
     border-radius: 40px;
     padding-left: 20px;
