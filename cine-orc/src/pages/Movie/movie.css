@@ -45,3 +45,26 @@ h4 {
     background-color: green;
     color: white;
 }
+
+.atores-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.ator {
+    text-align: center;
+    width: 150px;  /* Ajuste o tamanho conforme necessário */
+}
+
+.atores {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.nomeator{
+    display: flex;
+    width: 100%;
+}

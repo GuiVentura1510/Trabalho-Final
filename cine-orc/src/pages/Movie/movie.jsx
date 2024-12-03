@@ -90,23 +90,31 @@ function Movie() {
                             >Adicionar aos Favoritos</button>
                         )}
                     </div>
-                </div>
-                <div>
-                {cast.length > 0 && (
-                    <div className='elenco'>
-                        <h4>Elenco</h4>
-                        <ul>
-                            {cast.slice(0,5).map(actor => (
-                                <li key={actor.id}>
-                                    <img src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} alt={actor.name} className='atores' />
-                                    <p>{actor.name}</p>
-                                    <p>{actor.character}</p>
-                                </li>
-                            ))}
-                        </ul>
+                    <div>
+                    {cast.length > 0 && (
+                        <div className='elenco'>
+                            <h4>Elenco</h4>
+                            <div className='atores-container'>
+                                {cast.slice(0, 5).map(actor => (
+                                    <div key={actor.id} className="ator">
+                                        {actor.profile_path && (
+                                            <img 
+                                                src={`https://image.tmdb.org/t/p/w500${actor.profile_path}`} 
+                                                alt={actor.name} 
+                                                className='atores' 
+                                            />
+                                        )}
+                                        <div className='nomeator'>
+                                        <p>{actor.name}</p>  {/* Nome do ator/atriz */}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                     </div>
-                )}
                 </div>
+
             </div>
         </div>
     );
