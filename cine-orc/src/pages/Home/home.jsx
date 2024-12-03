@@ -59,11 +59,11 @@ function Home() {
             <SearchBar onSearch={handleSearch}/>
             <Filter />
             <div className='container-filmes'>
-                <h2 className='categoria'>Melhores Filmes</h2>
+                <h2 className='categoria'>Maior nota</h2>
                 <div className='filmes'>
                     {pesquisados && pesquisados.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
                 </div>
-                <h2 className='categoria'> No cinema</h2>
+                <h2 className='categoria'> Em Cartaz</h2>
                 <div className='filmes'>
                     {cinema && cinema.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
                 </div>
