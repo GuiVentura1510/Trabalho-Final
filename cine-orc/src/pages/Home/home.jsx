@@ -46,19 +46,15 @@ function Home() {
         <div>
             <Header redirect={handleHomeRedirect} />
             <SearchBar onSearch={handleSearch}/>
-            {/* <div className='search-bar'>
-                <input
-                    type='search'
-                    placeholder='Digite o nome do filme'
-                    value={filme}
-                    onChange={(e) => setFilme(e.target.value)}
-                ></input>
-            </div> */}
             <Filter />
             <div className='container-filmes'>
                 <h2 className='categoria'>Melhores Filmes</h2>
                 <div className='filmes'>
+<<<<<<< HEAD
                     {pesquisados && pesquisados.map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+=======
+                    {topMovies && topMovies.slice(0,10).map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
+>>>>>>> 4f9490f311733ec45431aee21e5b39b1f065ee9b
                 </div>
             </div>
         </div>
