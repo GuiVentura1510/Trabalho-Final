@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
 import Filter from '../../components/Filter';
-import LogoFilme from '../../components/LogoFilme';
+import LogoFilme from '../../components/LogoFIlme';
 import './home.css'
 
 const language = import.meta.env.VITE_LANGUAGE
@@ -50,11 +50,7 @@ function Home() {
             <div className='container-filmes'>
                 <h2 className='categoria'>Melhores Filmes</h2>
                 <div className='filmes'>
-<<<<<<< HEAD
                     {pesquisados && pesquisados.map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
-=======
-                    {topMovies && topMovies.slice(0,10).map((movie)=><LogoFilme key={movie.id} movie={movie}/>)}
->>>>>>> 4f9490f311733ec45431aee21e5b39b1f065ee9b
                 </div>
             </div>
         </div>
