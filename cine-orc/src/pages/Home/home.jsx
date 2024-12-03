@@ -53,7 +53,6 @@ function Home() {
     getCinema(cinemaUrl);
   }, []);
 
-<<<<<<< HEAD
   return (
     <div>
       <Header />
@@ -62,31 +61,15 @@ function Home() {
       <div className='container-filmes'>
         {section === 'topMovies' && (
           <>
-            <h2 className='categoria'>Melhores Filmes</h2>
+            <h2 className='categoria'>Maior Nota</h2>
             <div className='filmes'>
               {pesquisados && pesquisados.slice(0, 9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
-=======
-    return (
-        <div>
-            <Header redirect={handleHomeRedirect} />
-            <SearchBar onSearch={handleSearch}/>
-            <Filter />
-            <div className='container-filmes'>
-                <h2 className='categoria'>Maior nota</h2>
-                <div className='filmes'>
-                    {pesquisados && pesquisados.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
-                </div>
-                <h2 className='categoria'> Em Cartaz</h2>
-                <div className='filmes'>
-                    {cinema && cinema.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
-                </div>
->>>>>>> a0a82a4c16924de07b6a8c8379a0ae80ff0cf299
             </div>
           </>
         )}
         {section === 'cinema' && (
           <>
-            <h2 className='categoria'>No cinema</h2>
+            <h2 className='categoria'>Em Cartaz</h2>
             <div className='filmes'>
               {cinema && cinema.slice(0, 9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
             </div>
