@@ -2,30 +2,27 @@
     font-family: inherit;
 }
 
-
-.perfil{
+.perfil {
     display: flex;
     flex-direction: column;
     margin-left: 20vh;
-    
-    padding-top:5vh;
+    padding-top: 5vh;
     padding-bottom: 0vh;
     width: 40%;
-    
 }
 
 .perfil h4 {
     padding-top: 20px;
-    background-color: #fefae0;  
+    background-color: #fefae0;
     font-size: 30px;
 }
 
-p{
+p {
     font-size: 24px;
     margin-left: 5vh;
 }
 
-.botoes{
+.botoes {
     display: flex;
     justify-content: center;
     height: 10vh;
@@ -34,13 +31,74 @@ p{
     padding: 3vh;
 }
 
-.botoes button{
+.botoes button {
     font-size: 20px;
     border-radius: 30px;
     cursor: pointer;
 }
-.botoes button:hover{
+
+.botoes button:hover {
     transform: scale(1.05);
     transition: transform 0.2s ease-in-out;
 }
 
+.favoritos h4 {
+    padding-top: 20px;
+    background-color: #fefae0;
+    font-size: 30px;
+}
+
+.favoritos {
+    display: flex;
+    flex-direction: column;
+    margin-left: 14vh;
+    padding-top: 5vh;
+    padding-bottom: 0vh;
+    width: 70%;
+}
+
+.filmes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.filme-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Garantir que o título seja centralizado horizontalmente */
+    width: 150px;
+    text-align: center;
+    /* Garantir que o texto dentro do item também se centralize */
+}
+
+.filme-capa {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.filme-capa:hover {
+    transform: scale(1.05);
+}
+
+.titulo-filme {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: center;
+    /* Garantir alinhamento horizontal */
+    color: black;
+    font-weight: bold;
+    word-wrap: break-word;
+    background-color: #fefae0;
+    padding: 5px 0;
+    width: 100%;
+}
