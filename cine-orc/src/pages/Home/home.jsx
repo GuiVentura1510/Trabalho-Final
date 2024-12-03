@@ -48,10 +48,10 @@ function Home() {
     getTopRatedMovies(topRatedUrl);
   }, []);
 
-  useEffect(() => {
+  useEffect(() =>{
     const cinemaUrl = `${moviesURL}now_playing?${apiKey}&language=${language}`;
-    getCinema(cinemaUrl);
-  }, []);
+    getCinema(cinemaUrl)
+},[])
 
   return (
     <div>
@@ -59,23 +59,15 @@ function Home() {
       <SearchBar onSearch={handleSearch} />
       <Filter />
       <div className='container-filmes'>
-        {section === 'topMovies' && (
-          <>
-            <h2 className='categoria'>Maior Nota</h2>
-            <div className='filmes'>
-              {pesquisados && pesquisados.slice(0, 9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+                <h2 className='categoria'>Maior nota</h2>
+                <div className='filmes'>
+                    {pesquisados && pesquisados.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+                </div>
+                <h2 className='categoria'> Em Cartaz</h2>
+                <div className='filmes'>
+                    {cinema && cinema.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+                </div>
             </div>
-          </>
-        )}
-        {section === 'cinema' && (
-          <>
-            <h2 className='categoria'>Em Cartaz</h2>
-            <div className='filmes'>
-              {cinema && cinema.slice(0, 9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
-            </div>
-          </>
-        )}
-      </div>
     </div>
   );
 }
