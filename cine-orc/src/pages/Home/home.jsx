@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import Header from '../../components/Header';
 import SearchBar from '../../components/SearchBar';
 import Filter from '../../components/Filter';
-import LogoFilme from '../../components/LogoFIlme';
-import './home.css'
+import LogoFilme from '../../components/LogoFilme';
+import './home.css' 
 
 const language = import.meta.env.VITE_LANGUAGE
 const apiKey = import.meta.env.VITE_API_KEY
@@ -50,7 +50,7 @@ function Home() {
             <div className='container-filmes'>
                 <h2 className='categoria'>Melhores Filmes</h2>
                 <div className='filmes'>
-                    {pesquisados && pesquisados.map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
+                    {pesquisados && pesquisados.slice(0,9).map((movie) => <LogoFilme key={movie.id} movie={movie} />)}
                 </div>
             </div>
         </div>

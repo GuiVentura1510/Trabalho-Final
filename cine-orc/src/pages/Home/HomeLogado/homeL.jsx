@@ -50,7 +50,7 @@ function HomeL() {
             <SearchBar onSearch={handleSearch} /> 
             <Filter />
             <div className='filmes'>
-                {pesquisados && pesquisados.slice(0, 10).map((movie) => (
+                {pesquisados && pesquisados.slice(0, 9).map((movie) => (
                     <LogoFilme key={movie.id} movie={movie} />
                 ))}
             </div>
